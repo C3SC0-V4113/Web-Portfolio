@@ -1,6 +1,10 @@
+import { DrawerMenu, NavMenu } from "./components/NavBar";
+
 export const WebPortfolioApp = () => {
   return (
     <>
+      <DrawerMenu />
+      <NavMenu />
       <div className="bg-background text-background-foreground">
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </div>
