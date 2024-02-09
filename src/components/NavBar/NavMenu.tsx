@@ -11,7 +11,7 @@ import {
 
 export const NavMenu = () => {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
         <NavigationMenuItem className="p-1">
           <NavigationMenuLink href="#home">Home</NavigationMenuLink>
