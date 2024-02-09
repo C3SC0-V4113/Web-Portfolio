@@ -25,7 +25,7 @@ export const DrawerMenu = () => {
           </Button>
         </DrawerTrigger>
         <DrawerPortal>
-          <DrawerContent className="fixed bottom-0 right-0 flex flex-col rounded-t-[10px] sm:left-auto sm:w-[400px] h-full">
+          <DrawerContent className="fixed bottom-0 right-0 flex flex-col rounded-l-lg rounded-r-none sm:left-auto sm:w-[400px] h-full">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem className="p-1">
