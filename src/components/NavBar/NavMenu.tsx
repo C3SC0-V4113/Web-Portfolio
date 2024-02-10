@@ -8,32 +8,49 @@ import {
   NavigationMenuTrigger,
   //   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
+import { Button } from "../ui/button";
 
 export const NavMenu = () => {
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
-        <NavigationMenuItem className="p-1">
-          <NavigationMenuLink href="#home">Home</NavigationMenuLink>
+        <NavigationMenuItem asChild>
+          <Button className="p-4" variant={"ghost"}>
+            <NavigationMenuLink href="#home">Home</NavigationMenuLink>
+          </Button>
         </NavigationMenuItem>
-        <NavigationMenuItem className="p-1">
-          <NavigationMenuLink href="#about">About</NavigationMenuLink>
+        <NavigationMenuItem asChild>
+          <Button className="p-4" variant={"ghost"}>
+            <NavigationMenuLink href="#about">About</NavigationMenuLink>
+          </Button>
         </NavigationMenuItem>
-        <NavigationMenuItem className="p-1">
-          <NavigationMenuLink href="#services">Services</NavigationMenuLink>
+        <NavigationMenuItem asChild>
+          <Button className="p-4" variant={"ghost"}>
+            <NavigationMenuLink href="#services">Services</NavigationMenuLink>
+          </Button>
         </NavigationMenuItem>
-        <NavigationMenuItem className="p-1">
-          <NavigationMenuLink href="#skills">Skills</NavigationMenuLink>
+        <NavigationMenuItem asChild>
+          <Button className="p-4" variant={"ghost"}>
+            <NavigationMenuLink href="#skills">Skills</NavigationMenuLink>
+          </Button>
         </NavigationMenuItem>
-        <NavigationMenuItem className="p-1">
-          <NavigationMenuLink href="#projects">Projects</NavigationMenuLink>
+        <NavigationMenuItem asChild>
+          <Button className="p-4" variant={"ghost"}>
+            <NavigationMenuLink href="#projects">Projects</NavigationMenuLink>
+          </Button>
         </NavigationMenuItem>
-        <NavigationMenuItem className="p-1">
-          <NavigationMenuLink href="#contacts">Contact Me</NavigationMenuLink>
+        <NavigationMenuItem asChild>
+          <Button className="p-4" variant={"ghost"}>
+            <NavigationMenuLink href="#contacts">Contact Me</NavigationMenuLink>
+          </Button>
         </NavigationMenuItem>
-        <NavigationMenuItem className="p-1">
+        <NavigationMenuItem>
           <NavigationMenuTrigger>English</NavigationMenuTrigger>
-          <NavigationMenuContent>Español</NavigationMenuContent>
+          <NavigationMenuContent>
+            <ul>
+              <NavigationMenuLink>Español</NavigationMenuLink>
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
