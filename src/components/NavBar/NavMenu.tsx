@@ -1,14 +1,11 @@
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  //   NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  //   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Button } from "../ui/button";
+import { LanguagesForm } from "./LanguagesForm";
 
 export const NavMenu = () => {
   return (
@@ -45,12 +42,7 @@ export const NavMenu = () => {
           </Button>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>English</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul>
-              <NavigationMenuLink>Español</NavigationMenuLink>
-            </ul>
-          </NavigationMenuContent>
+          <LanguagesForm />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

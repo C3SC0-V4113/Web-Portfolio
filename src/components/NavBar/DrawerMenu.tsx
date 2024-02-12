@@ -1,9 +1,3 @@
-import {
-  Drawer,
-  DrawerContent,
-  DrawerPortal,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import { Button } from "../ui/button";
 import { AiOutlineMenu } from "react-icons/ai";
 import {
@@ -14,53 +8,52 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@radix-ui/react-navigation-menu";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 export const DrawerMenu = () => {
   return (
     <div className="md:hidden">
-      <Drawer direction="right">
-        <DrawerTrigger asChild>
+      <Sheet>
+        <SheetTrigger asChild>
           <Button>
             <AiOutlineMenu />
           </Button>
-        </DrawerTrigger>
-        <DrawerPortal>
-          <DrawerContent className="fixed bottom-0 right-0 flex flex-col rounded-l-lg rounded-r-none sm:left-auto sm:w-[400px] h-full">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem className="p-1">
-                  <NavigationMenuLink href="#home">Home</NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem className="p-1">
-                  <NavigationMenuLink href="#about">About</NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem className="p-1">
-                  <NavigationMenuLink href="#services">
-                    Services
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem className="p-1">
-                  <NavigationMenuLink href="#skills">Skills</NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem className="p-1">
-                  <NavigationMenuLink href="#projects">
-                    Projects
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem className="p-1">
-                  <NavigationMenuLink href="#contacts">
-                    Contact Me
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem className="p-1">
-                  <NavigationMenuTrigger>English</NavigationMenuTrigger>
-                  <NavigationMenuContent>Español</NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </DrawerContent>
-        </DrawerPortal>
-      </Drawer>
+        </SheetTrigger>
+        <SheetContent side={"right"} className="sm:w-[400px]">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem className="p-1">
+                <NavigationMenuLink href="#home">Home</NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="p-1">
+                <NavigationMenuLink href="#about">About</NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="p-1">
+                <NavigationMenuLink href="#services">
+                  Services
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="p-1">
+                <NavigationMenuLink href="#skills">Skills</NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="p-1">
+                <NavigationMenuLink href="#projects">
+                  Projects
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="p-1">
+                <NavigationMenuLink href="#contacts">
+                  Contact Me
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="p-1">
+                <NavigationMenuTrigger>English</NavigationMenuTrigger>
+                <NavigationMenuContent>Español</NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </SheetContent>
+      </Sheet>
     </div>
   );
 };
