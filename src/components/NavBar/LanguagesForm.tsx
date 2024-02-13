@@ -26,7 +26,13 @@ const languages = [
   },
 ];
 
-export const LanguagesForm = () => {
+interface Props {
+  classNames?: {
+    container: string;
+  };
+}
+
+export const LanguagesForm = ({ classNames }: Props) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("english");
 
@@ -37,7 +43,7 @@ export const LanguagesForm = () => {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="justify-between p-4 w-44"
+          className={`justify-between p-4 w-44 ${classNames?.container}`}
         >
           {value
             ? languages.find((framework) => framework.value === value)?.label
@@ -45,7 +51,7 @@ export const LanguagesForm = () => {
           <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="p-0 w-44">
+      <PopoverContent className={`p-0 w-44 ${classNames?.container}`}>
         <Command>
           <CommandInput placeholder="Search language..." />
           <CommandEmpty>Language not found</CommandEmpty>
@@ -61,7 +67,7 @@ export const LanguagesForm = () => {
               >
                 <Check
                   className={cn(
-                    "mr-2 h-4 w-4",
+                    `mr-2 h-4 w-4`,
                     value === language.value ? "opacity-100" : "opacity-0"
                   )}
                 />
