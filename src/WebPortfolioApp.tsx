@@ -1,9 +1,13 @@
+import { About } from "./components/About";
+import { Header } from "./components/Home";
 import { NavBar } from "./components/NavBar";
 
 export const WebPortfolioApp = () => {
   return (
     <>
       <NavBar />
+      <Header />
+      <About />
       <div className="bg-background text-background-foreground">
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </div>

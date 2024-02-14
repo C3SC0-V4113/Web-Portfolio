@@ -1,7 +1,13 @@
 import { Button } from "../ui/button";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { Command, CommandGroup, CommandItem, CommandList } from "../ui/command";
+import {
+  Command,
+  CommandGroup,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+} from "../ui/command";
 import { FaCode, FaHome, FaLink, FaStar } from "react-icons/fa";
 import { MdOutlineWorkspaces } from "react-icons/md";
 import { FaMessage } from "react-icons/fa6";
@@ -65,6 +71,7 @@ export const DrawerMenu = () => {
                   </CommandItem>
                 ))}
               </CommandGroup>
+              <CommandSeparator className="my-4" />
               <CommandGroup>
                 <LanguagesForm classNames={{ container: "w-full" }} />
               </CommandGroup>
