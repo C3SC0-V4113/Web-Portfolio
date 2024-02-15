@@ -16,13 +16,13 @@ export const Header = () => {
           </Button>
         </div>
         <div className="flex flex-row justify-center gap-4 align-middle md:justify-start">
-          <div className="p-2 rounded-full bg-accent text-accent-foreground">
+          <div className="p-2 rounded-full bg-accent text-accent-foreground hover:bg-primary hover:text-primary-foreground">
             <FaGithub className="w-6 h-6" />
           </div>
-          <div className="p-2 rounded-full bg-accent text-accent-foreground">
+          <div className="p-2 rounded-full bg-accent text-accent-foreground hover:bg-primary hover:text-primary-foreground">
             <FaLinkedin className="w-6 h-6" />
           </div>
-          <div className="p-2 rounded-full bg-accent text-accent-foreground">
+          <div className="p-2 rounded-full bg-accent text-accent-foreground hover:bg-primary hover:text-primary-foreground">
             <FaXTwitter className="w-6 h-6" />
           </div>
         </div>
