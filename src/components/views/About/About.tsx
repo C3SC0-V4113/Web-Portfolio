@@ -4,7 +4,7 @@ import { Button } from "../../ui/button";
 export const About = () => {
   return (
     <div className="flex flex-col gap-3 px-4 py-5 md:py-8 md:px-6 bg-primary text-primary-foreground">
-      <div className="flex flex-col gap-0.5 text-center ">
+      <div className="flex flex-col gap-0.5 text-center">
         <span className="text-sm font-light">Who Am I?</span>
         <h1 className="text-2xl font-bold">About Me</h1>
       </div>
