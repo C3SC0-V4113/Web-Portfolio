@@ -1,6 +1,7 @@
-import { About } from "./components/About";
-import { Header } from "./components/Home";
-import { NavBar } from "./components/NavBar";
+import { About } from "./components/views/About";
+import { Header } from "./components/views/Home";
+import { NavBar } from "./components/views/NavBar";
+import { Services } from "./components/views/Services";
 
 export const WebPortfolioApp = () => {
   return (
@@ -8,6 +9,7 @@ export const WebPortfolioApp = () => {
       <NavBar />
       <Header />
       <About />
+      <Services />
       <div className="bg-background text-background-foreground">
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </div>

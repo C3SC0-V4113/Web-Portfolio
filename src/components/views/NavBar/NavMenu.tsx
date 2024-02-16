@@ -4,7 +4,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { LanguagesForm } from "./LanguagesForm";
 
 export const NavMenu = () => {

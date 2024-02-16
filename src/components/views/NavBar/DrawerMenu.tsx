@@ -1,13 +1,13 @@
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { AiOutlineMenu } from "react-icons/ai";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
 import {
   Command,
   CommandGroup,
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "../ui/command";
+} from "../../ui/command";
 import { FaCode, FaHome, FaLink, FaStar } from "react-icons/fa";
 import { MdOutlineWorkspaces } from "react-icons/md";
 import { FaMessage } from "react-icons/fa6";

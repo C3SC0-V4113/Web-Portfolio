@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { ShapeSVG } from "./ShapeSVG";
 import { FaXTwitter } from "react-icons/fa6";
 
