@@ -2,10 +2,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "../../ui/button";
 import { ShapeSVG } from "./ShapeSVG";
 import { FaXTwitter } from "react-icons/fa6";
+import { Container } from "@/components/ui/container";
 
 export const Header = () => {
   return (
-    <div className="grid grid-cols-1 gap-3 px-4 py-5 md:grid-cols-2 md:py-8 md:px-6 lg:py-16 lg:px-12 xl:px-20 2xl:pl-60">
+    <Container className="grid grid-cols-1">
       <div className="flex flex-col gap-3 text-center md:text-justify ">
         <h1 className="text-3xl font-bold">Francisco Valle</h1>
         <h2>Soy el desarrollador web que potenciará tu presencia en linea</h2>
@@ -30,6 +31,6 @@ export const Header = () => {
       <div className="justify-center hidden align-middle md:flex">
         <ShapeSVG />
       </div>
-    </div>
+    </Container>
   );
 };

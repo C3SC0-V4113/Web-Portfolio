@@ -10,6 +10,7 @@ import { MdCode, MdDesignServices } from "react-icons/md";
 import { IoLogoPwa, IoRocketSharp } from "react-icons/io5";
 import { SiNextdotjs } from "react-icons/si";
 import { IconType } from "react-icons/lib";
+import { Container } from "@/components/ui/container";
 
 const servicesCards: {
   id: number;
@@ -57,18 +58,18 @@ const servicesCards: {
 
 export const Services = () => {
   return (
-    <div className="flex flex-col gap-3 px-4 py-5 md:py-8 md:px-6">
+    <Container className="flex flex-col">
       <div className="flex flex-col gap-0.5 text-center">
         <span className="text-sm font-light">What i Do</span>
         <h1 className="text-2xl font-bold">Services</h1>
       </div>
       <div className="flex justify-center align-middle">
-        <Carousel className="w-full max-w-56 sm:max-w-xs md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-6xl">
+        <Carousel className="w-full max-w-56 sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-[1900px]">
           <CarouselContent>
             {servicesCards.map((service) => (
               <CarouselItem
                 key={service.id}
-                className="flex md:basis-1/2 lg:basis-1/3 2xl:basis-1/4"
+                className="flex md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5"
               >
                 <Card className="flex flex-col grow">
                   <CardHeader className="flex justify-center h-48 text-center align-middle">
@@ -88,6 +89,6 @@ export const Services = () => {
           <CarouselNext />
         </Carousel>
       </div>
-    </div>
+    </Container>
   );
 };
