@@ -7,37 +7,37 @@ export const Skills = () => {
       id: "1",
       department: "Web Development",
       skillName: "React",
-      proficiency: "90" /**From 1 to 100 */,
+      proficiency: 90 /**From 1 to 100 */,
     },
     {
       id: "2",
       department: "Web Development",
       skillName: "NextJS",
-      proficiency: "70" /**From 1 to 100 */,
+      proficiency: 70 /**From 1 to 100 */,
     },
     {
       id: "4",
       department: "Web Design",
       skillName: "Tailwind",
-      proficiency: "90" /**From 1 to 100 */,
+      proficiency: 90 /**From 1 to 100 */,
     },
     {
       id: "5",
       department: "Backend Development",
       skillName: "NodeJS",
-      proficiency: "40" /**From 1 to 100 */,
+      proficiency: 40 /**From 1 to 100 */,
     },
     {
       id: "6",
       department: "Service Worker Tool",
       skillName: "Workbox",
-      proficiency: "60" /**From 1 to 100 */,
+      proficiency: 60 /**From 1 to 100 */,
     },
     {
       id: "7",
       department: "Mobile Development",
       skillName: "React Native",
-      proficiency: "70" /**From 1 to 100 */,
+      proficiency: 70 /**From 1 to 100 */,
     },
   ];
   return (
