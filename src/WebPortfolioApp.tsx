@@ -2,6 +2,7 @@ import { About } from "./components/views/About";
 import { Header } from "./components/views/Home";
 import { NavBar } from "./components/views/NavBar";
 import { Services } from "./components/views/Services";
+import { Skills } from "./components/views/Skills";
 
 export const WebPortfolioApp = () => {
   return (
@@ -10,6 +11,7 @@ export const WebPortfolioApp = () => {
       <Header />
       <About />
       <Services />
+      <Skills />
       <div className="bg-background text-background-foreground">
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </div>

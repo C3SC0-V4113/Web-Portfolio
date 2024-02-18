@@ -9,6 +9,7 @@ import {
 import { MdCode, MdDesignServices } from "react-icons/md";
 import { IoLogoPwa, IoRocketSharp } from "react-icons/io5";
 import { SiNextdotjs } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 import { IconType } from "react-icons/lib";
 import { Container } from "@/components/ui/container";
 
@@ -50,7 +51,7 @@ const servicesCards: {
   },
   {
     id: 6,
-    icon: IoLogoPwa,
+    icon: TbBrandReactNative,
     title: "Aplicaciones Móviles con React Native",
     desc: "Llevo tus ideas a dispositivos móviles. Desarrollo aplicaciones nativas multiplataforma utilizando React Native para ofrecer experiencias móviles fluidas y consistentes.",
   },

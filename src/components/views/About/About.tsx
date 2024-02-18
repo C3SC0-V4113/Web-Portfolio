@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <Container className="flex flex-col bg-primary text-primary-foreground">
       <div className="flex flex-col gap-0.5 text-center">
-        <span className="text-sm font-light">Who Am I?</span>
+        <span className="text-sm font-light">Who Am I</span>
         <h1 className="text-2xl font-bold">About Me</h1>
       </div>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-3 lg:gap-16">
