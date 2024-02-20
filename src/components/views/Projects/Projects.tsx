@@ -87,14 +87,15 @@ export const Projects = () => {
         <span className="text-sm font-light">What Can I Do</span>
         <h1 className="text-2xl font-bold">Projects</h1>
       </div>
+
       <Tabs defaultValue="all" className="w-full">
         <TabsList className="flex gap-3 mb-3">
           <TabsTrigger asChild value="all">
             <Button variant={"ghost"}>All</Button>
           </TabsTrigger>
-          <TabsTrigger asChild value="web">
+          {/* <TabsTrigger asChild value="web">
             <Button variant={"ghost"}>Web Development</Button>
-          </TabsTrigger>
+          </TabsTrigger> */}
         </TabsList>
         <TabsContent value="all">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
