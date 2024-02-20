@@ -3,6 +3,7 @@ import { Button } from "../../ui/button";
 import { ShapeSVG } from "./ShapeSVG";
 import { FaXTwitter } from "react-icons/fa6";
 import { Container } from "@/components/ui/container";
+import { IconButton } from "@/components/ui/icon-button";
 
 export const Header = () => {
   return (
@@ -17,15 +18,12 @@ export const Header = () => {
           </Button>
         </div>
         <div className="flex flex-row justify-center gap-4 align-middle md:justify-start">
-          <div className="p-2 rounded-full bg-accent text-accent-foreground hover:bg-primary hover:text-primary-foreground">
-            <FaGithub className="w-6 h-6" />
-          </div>
-          <div className="p-2 rounded-full bg-accent text-accent-foreground hover:bg-primary hover:text-primary-foreground">
-            <FaLinkedin className="w-6 h-6" />
-          </div>
-          <div className="p-2 rounded-full bg-accent text-accent-foreground hover:bg-primary hover:text-primary-foreground">
-            <FaXTwitter className="w-6 h-6" />
-          </div>
+          <IconButton icon={FaGithub} href="https://github.com/C3SC0-V4113" />
+          <IconButton
+            icon={FaLinkedin}
+            href="https://www.linkedin.com/in/francisco-jos%C3%A9-valle-cornejo/"
+          />
+          <IconButton icon={FaXTwitter} href="https://twitter.com/c3_sc0" />
         </div>
       </div>
       <div className="justify-center hidden align-middle md:flex">

@@ -13,7 +13,7 @@ export const About = () => {
         <div className="flex justify-center align-middle max-h-64">
           <Avatar className="w-40 h-40 md:w-56 md:h-56 bg-secondary">
             <AvatarImage
-              src="/public/practice_4__1_-removebg.png"
+              src="/practice_4__1_-removebg.png"
               alt="about-me_img"
             />
             <AvatarFallback>FV</AvatarFallback>
