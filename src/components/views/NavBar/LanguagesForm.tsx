@@ -46,8 +46,8 @@ export const LanguagesForm = ({ classNames }: Props) => {
           className={`justify-between p-4 w-44 ${classNames?.container}`}
         >
           {value
-            ? languages.find((framework) => framework.value === value)?.label
-            : "Select framework..."}
+            ? languages.find((language) => language.value === value)?.label
+            : "Select language..."}
           <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
         </Button>
       </PopoverTrigger>

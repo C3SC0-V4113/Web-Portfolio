@@ -66,7 +66,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             <DialogHeader>
               <DialogTitle>{project.name}</DialogTitle>
             </DialogHeader>
-            <ScrollArea className="h-60">
+            <ScrollArea className="h-96 lg:h-full">
               <div className="flex flex-col gap-3 px-4 py-5">
                 <Carousel>
                   <CarouselContent>
