@@ -1,4 +1,5 @@
 import { About } from "./components/views/About";
+import { ContactMe } from "./components/views/Contact";
 import { Header } from "./components/views/Home";
 import { NavBar } from "./components/views/NavBar";
 import { Projects } from "./components/views/Projects";
@@ -14,6 +15,7 @@ export const WebPortfolioApp = () => {
       <Services />
       <Skills />
       <Projects />
+      <ContactMe />
       <div className="bg-background text-background-foreground">
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </div>

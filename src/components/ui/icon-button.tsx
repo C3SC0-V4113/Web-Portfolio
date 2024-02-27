@@ -10,12 +10,14 @@ interface iconButtonProps
   href?: string;
   className?: string;
   target?: HTMLAttributeAnchorTarget;
+  iconClass?: string;
 }
 
 export const IconButton = ({
   icon: Icon,
   href,
   target = "_blank",
+  iconClass,
   className,
   ...rest
 }: iconButtonProps) => {
@@ -26,7 +28,7 @@ export const IconButton = ({
       target={target}
       {...rest}
     >
-      <Icon className="w-6 h-6" />
+      <Icon className={`w-6 h-6 ${iconClass}`} />
     </a>
   );
 };
