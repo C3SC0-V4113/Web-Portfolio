@@ -62,7 +62,7 @@ export const Services = () => {
     <Container className="flex flex-col">
       <div className="flex flex-col gap-0.5 text-center">
         <span className="text-sm font-light">What i Do</span>
-        <h1 className="text-2xl font-bold">Services</h1>
+        <h1 className="text-2xl font-bold text-primary">Services</h1>
       </div>
       <div className="flex justify-center align-middle">
         <Carousel className="w-full max-w-56 sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-[1900px]">
@@ -74,7 +74,7 @@ export const Services = () => {
               >
                 <Card className="flex flex-col grow">
                   <CardHeader className="flex justify-center h-48 text-center align-middle">
-                    <service.icon className="self-center w-16 h-16" />
+                    <service.icon className="self-center w-16 h-16 text-primary" />
                     <CardTitle>{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent>

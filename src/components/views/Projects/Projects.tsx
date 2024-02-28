@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { Tabs } from "@/components/ui/tabs";
-import { TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+import { TabsContent } from "@radix-ui/react-tabs";
 
 import { IProjects } from "@/contracts/interfaces/IProjects";
 
@@ -85,18 +85,18 @@ export const Projects = () => {
     <Container className="flex flex-col">
       <div className="flex flex-col gap-0.5 text-center">
         <span className="text-sm font-light">What Can I Do</span>
-        <h1 className="text-2xl font-bold">Projects</h1>
+        <h1 className="text-2xl font-bold text-primary">Projects</h1>
       </div>
 
       <Tabs defaultValue="all" className="w-full">
-        <TabsList className="flex gap-3 mb-3">
+        {/* <TabsList className="flex gap-3 mb-3">
           <TabsTrigger asChild value="all">
             <Button variant={"ghost"}>All</Button>
           </TabsTrigger>
-          {/* <TabsTrigger asChild value="web">
+          <TabsTrigger asChild value="web">
             <Button variant={"ghost"}>Web Development</Button>
-          </TabsTrigger> */}
-        </TabsList>
+          </TabsTrigger>
+        </TabsList> */}
         <TabsContent value="all">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {projectsJSON.map((project) => (

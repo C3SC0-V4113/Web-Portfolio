@@ -30,7 +30,7 @@ export const NavMenu = () => {
       handler: "Projects",
     },
     {
-      direction: "#contact",
+      direction: "contactme",
       handler: "Contact Me",
     },
   ];
@@ -40,10 +40,12 @@ export const NavMenu = () => {
       <NavigationMenuList>
         {navMenu.map((navItem, index) => (
           <NavigationMenuItem key={index} asChild>
-            <Button className="p-4" variant={"ghost"}>
-              <NavigationMenuLink href={navItem.direction}>
-                {navItem.handler}
-              </NavigationMenuLink>
+            <Button
+              onClick={() => console.log(navItem.direction)}
+              className="p-4"
+              variant={"ghost"}
+            >
+              <NavigationMenuLink>{navItem.handler}</NavigationMenuLink>
             </Button>
           </NavigationMenuItem>
         ))}

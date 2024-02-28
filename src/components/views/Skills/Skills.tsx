@@ -44,7 +44,7 @@ export const Skills = () => {
     <Container className="flex flex-col bg-primary text-primary-foreground">
       <div className="flex flex-col gap-0.5 text-center">
         <span className="text-sm font-light">Why Choose Me</span>
-        <h1 className="text-2xl font-bold">Skills</h1>
+        <h1 className="text-2xl font-bold text-background">Skills</h1>
       </div>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-x-12 lg:gap-16">
         {skills.map((skill) => (
@@ -53,7 +53,7 @@ export const Skills = () => {
               <p className="text-lg font-semibold">{skill.department}</p>
               <div className="flex justify-between">
                 <p className="font-medium">{skill.skillName}</p>
-                <p className="font-semibold text-destructive">
+                <p className="font-semibold text-accent">
                   {skill.proficiency}%
                 </p>
               </div>
