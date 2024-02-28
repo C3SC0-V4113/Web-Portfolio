@@ -30,7 +30,7 @@ export const NavMenu = () => {
       handler: "Projects",
     },
     {
-      direction: "contactme",
+      direction: "#contactme",
       handler: "Contact Me",
     },
   ];
@@ -45,7 +45,9 @@ export const NavMenu = () => {
               className="p-4"
               variant={"ghost"}
             >
-              <NavigationMenuLink>{navItem.handler}</NavigationMenuLink>
+              <NavigationMenuLink href={navItem.direction}>
+                {navItem.handler}
+              </NavigationMenuLink>
             </Button>
           </NavigationMenuItem>
         ))}

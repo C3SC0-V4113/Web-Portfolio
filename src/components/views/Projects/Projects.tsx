@@ -82,7 +82,7 @@ export const Projects = () => {
   ];
 
   return (
-    <Container className="flex flex-col">
+    <Container id="projects" className="flex flex-col">
       <div className="flex flex-col gap-0.5 text-center">
         <span className="text-sm font-light">What Can I Do</span>
         <h1 className="text-2xl font-bold text-primary">Projects</h1>

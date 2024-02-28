@@ -40,7 +40,7 @@ const navMenu = [
     icon: <MdOutlineWorkspaces className="w-6 h-6 mr-4" />,
   },
   {
-    direction: "#contact",
+    direction: "#contactme",
     handler: "Contact Me",
     icon: <FaMessage className="w-6 h-6 mr-4" />,
   },

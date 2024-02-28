@@ -4,7 +4,10 @@ import { Button } from "../../ui/button";
 
 export const About = () => {
   return (
-    <Container className="flex flex-col bg-primary text-primary-foreground">
+    <Container
+      id="about"
+      className="flex flex-col bg-primary text-primary-foreground"
+    >
       <div className="flex flex-col gap-0.5 text-center">
         <span className="text-sm font-light">Who Am I</span>
         <h1 className="text-2xl font-bold text-background">About Me</h1>

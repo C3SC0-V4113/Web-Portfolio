@@ -41,7 +41,10 @@ export const Skills = () => {
     },
   ];
   return (
-    <Container className="flex flex-col bg-primary text-primary-foreground">
+    <Container
+      id="skills"
+      className="flex flex-col bg-primary text-primary-foreground"
+    >
       <div className="flex flex-col gap-0.5 text-center">
         <span className="text-sm font-light">Why Choose Me</span>
         <h1 className="text-2xl font-bold text-background">Skills</h1>

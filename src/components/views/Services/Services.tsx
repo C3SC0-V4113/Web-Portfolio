@@ -59,7 +59,7 @@ const servicesCards: {
 
 export const Services = () => {
   return (
-    <Container className="flex flex-col">
+    <Container id="services" className="flex flex-col">
       <div className="flex flex-col gap-0.5 text-center">
         <span className="text-sm font-light">What i Do</span>
         <h1 className="text-2xl font-bold text-primary">Services</h1>
