@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -12,6 +11,7 @@ import { SiNextdotjs } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IconType } from "react-icons/lib";
 import { Container } from "@/components/ui/container";
+import { ServicesCard } from "./ServicesCard";
 
 const servicesCards: {
   id: number;
@@ -67,22 +67,12 @@ export const Services = () => {
       <div className="flex justify-center align-middle">
         <Carousel className="w-full max-w-56 sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-[1900px]">
           <CarouselContent>
-            {servicesCards.map((service) => (
+            {servicesCards.map(({ id, icon, desc, title }) => (
               <CarouselItem
-                key={service.id}
+                key={id}
                 className="flex md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5"
               >
-                <Card className="flex flex-col grow">
-                  <CardHeader className="flex justify-center h-48 text-center align-middle">
-                    <service.icon className="self-center w-16 h-16 text-primary" />
-                    <CardTitle>{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex text-justify">
-                      <p>{service.desc}</p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <ServicesCard Icon={icon} desc={desc} title={title} />
               </CarouselItem>
             ))}
           </CarouselContent>

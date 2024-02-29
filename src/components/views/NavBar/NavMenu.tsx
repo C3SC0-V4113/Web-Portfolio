@@ -10,27 +10,27 @@ import { LanguagesForm } from "./LanguagesForm";
 export const NavMenu = () => {
   const navMenu = [
     {
-      direction: "#home",
+      direction: "home",
       handler: "Home",
     },
     {
-      direction: "#about",
+      direction: "about",
       handler: "About",
     },
     {
-      direction: "#services",
+      direction: "services",
       handler: "Services",
     },
     {
-      direction: "#skills",
+      direction: "skills",
       handler: "Skills",
     },
     {
-      direction: "#projects",
+      direction: "projects",
       handler: "Projects",
     },
     {
-      direction: "#contactme",
+      direction: "contactme",
       handler: "Contact Me",
     },
   ];
@@ -41,13 +41,14 @@ export const NavMenu = () => {
         {navMenu.map((navItem, index) => (
           <NavigationMenuItem key={index} asChild>
             <Button
-              onClick={() => console.log(navItem.direction)}
+              onClick={() => {
+                const element = document.getElementById(navItem.direction);
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="p-4"
               variant={"ghost"}
             >
-              <NavigationMenuLink href={navItem.direction}>
-                {navItem.handler}
-              </NavigationMenuLink>
+              <NavigationMenuLink>{navItem.handler}</NavigationMenuLink>
             </Button>
           </NavigationMenuItem>
         ))}
