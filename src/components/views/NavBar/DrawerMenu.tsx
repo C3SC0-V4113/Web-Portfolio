@@ -12,7 +12,8 @@ import { FaCode, FaHome, FaLink, FaStar } from "react-icons/fa";
 import { MdOutlineWorkspaces } from "react-icons/md";
 import { FaMessage } from "react-icons/fa6";
 import { LanguagesForm } from "./LanguagesForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const navMenu = [
   {
@@ -49,6 +50,12 @@ const navMenu = [
 
 export const DrawerMenu = () => {
   const [open, setOpen] = useState(false);
+
+  const matches = useMediaQuery("(min-width: 768px)");
+
+  useEffect(() => {
+    matches && setOpen(false);
+  }, [matches]);
 
   return (
     <div className="md:hidden">
