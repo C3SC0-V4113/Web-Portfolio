@@ -36,26 +36,28 @@ export const NavMenu = () => {
   ];
 
   return (
-    <NavigationMenu className="hidden md:flex">
-      <NavigationMenuList>
-        {navMenu.map((navItem, index) => (
-          <NavigationMenuItem key={index} asChild>
-            <Button
-              onClick={() => {
-                const element = document.getElementById(navItem.direction);
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="p-4"
-              variant={"ghost"}
-            >
-              <NavigationMenuLink>{navItem.handler}</NavigationMenuLink>
-            </Button>
+    <div className="fixed top-0 right-0 z-10 justify-end hidden w-full p-3 md:flex bg-background">
+      <NavigationMenu>
+        <NavigationMenuList>
+          {navMenu.map((navItem, index) => (
+            <NavigationMenuItem key={index} asChild>
+              <Button
+                onClick={() => {
+                  const element = document.getElementById(navItem.direction);
+                  element?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="p-4"
+                variant={"ghost"}
+              >
+                <NavigationMenuLink>{navItem.handler}</NavigationMenuLink>
+              </Button>
+            </NavigationMenuItem>
+          ))}
+          <NavigationMenuItem>
+            <LanguagesForm />
           </NavigationMenuItem>
-        ))}
-        <NavigationMenuItem>
-          <LanguagesForm />
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   );
 };

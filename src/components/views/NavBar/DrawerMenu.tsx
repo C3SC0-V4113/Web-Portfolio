@@ -61,7 +61,7 @@ export const DrawerMenu = () => {
     <div className="md:hidden">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button>
+          <Button className="fixed z-10 border top-5 right-5 border-secondary">
             <AiOutlineMenu />
           </Button>
         </SheetTrigger>

@@ -7,7 +7,7 @@ import { IconButton } from "@/components/ui/icon-button";
 
 export const Header = () => {
   return (
-    <Container id="home" className="grid grid-cols-1">
+    <Container id="home" className="grid grid-cols-1 pt-20 md:pt-24">
       <div className="flex flex-col gap-3 text-center md:text-justify ">
         <h1 className="text-3xl font-bold">Francisco Valle</h1>
         <h2>Soy el desarrollador web que potenciará tu presencia en linea</h2>
