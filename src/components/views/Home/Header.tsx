@@ -12,8 +12,22 @@ export const Header = () => {
         <h1 className="text-3xl font-bold">Francisco Valle</h1>
         <h2>Soy el desarrollador web que potenciará tu presencia en linea</h2>
         <div className="flex flex-col gap-4 sm:flex-row">
-          <Button className="w-full md:w-auto">Contact Me</Button>
-          <Button className="w-full md:w-auto bg-accent text-accent-foreground hover:text-primary-foreground">
+          <Button
+            onClick={() => {
+              const element = document.getElementById("contactme");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="w-full md:w-auto"
+          >
+            Contact Me
+          </Button>
+          <Button
+            onClick={() => {
+              const element = document.getElementById("skills");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="w-full md:w-auto bg-accent text-accent-foreground hover:text-primary-foreground"
+          >
             My Works
           </Button>
         </div>
