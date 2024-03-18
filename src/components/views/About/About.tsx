@@ -11,6 +11,7 @@ import {
   DialogPortal,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { ResumeeCard } from "./ResumeeCard";
 
 export const About = () => {
   const [open, setOpen] = useState(false);
@@ -71,8 +72,18 @@ export const About = () => {
           <DialogOverlay />
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Download CV</DialogTitle>
+              <DialogTitle>Download Resumee</DialogTitle>
             </DialogHeader>
+            <div className="flex flex-col gap-5 sm:flex-row">
+              <ResumeeCard
+                title="Spanish Resumee"
+                pdfUrl="/pdf/Francisco_Valle-Desarrollador_React.pdf"
+              />
+              <ResumeeCard
+                title="English Resumee"
+                pdfUrl="/pdf/Francisco_Valle-React_Developer.pdf"
+              />
+            </div>
           </DialogContent>
         </DialogPortal>
       </Dialog>
