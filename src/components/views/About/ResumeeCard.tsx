@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { IconButton } from "@/components/ui/icon-button";
 import { FaFileDownload } from "react-icons/fa";
+import { FaFilePdf } from "react-icons/fa6";
 
 interface Props {
   pdfUrl: string;
@@ -9,8 +10,8 @@ interface Props {
 
 export const ResumeeCard = ({ pdfUrl, title }: Props) => {
   return (
-    <Card className="sm:basis-1/2">
-      <img className="w-full" src="/practice 2-min.jpg" />
+    <Card className="flex flex-col justify-center gap-1 p-2 align-middle sm:basis-1/2">
+      <FaFilePdf className="w-20 h-20 p-4 m-auto" />
       <CardHeader className="flex flex-row justify-between align-middle">
         <CardTitle className="my-auto">{title}</CardTitle>
         <IconButton
