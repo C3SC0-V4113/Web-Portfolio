@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "../../ui/button";
 import { LanguagesForm } from "./LanguagesForm";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const NavMenu = () => {
   const navMenu = [
@@ -53,6 +54,7 @@ export const NavMenu = () => {
               </Button>
             </NavigationMenuItem>
           ))}
+          <ThemeToggle />
           <NavigationMenuItem>
             <LanguagesForm />
           </NavigationMenuItem>

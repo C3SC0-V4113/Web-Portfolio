@@ -14,6 +14,7 @@ import { FaMessage } from "react-icons/fa6";
 import { LanguagesForm } from "./LanguagesForm";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navMenu = [
   {
@@ -92,6 +93,9 @@ export const DrawerMenu = () => {
                 ))}
               </CommandGroup>
               <CommandSeparator className="my-4" />
+              <CommandGroup>
+                <ThemeToggle />
+              </CommandGroup>
               <CommandGroup>
                 <LanguagesForm classNames={{ container: "w-full" }} />
               </CommandGroup>

@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { WebPortfolioApp } from "./WebPortfolioApp";
 import "./index.css";
-import { ThemeProvider } from "./components/theme-provider";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <Provider store={store}>
       <WebPortfolioApp />
-    </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 );
