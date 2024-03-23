@@ -6,10 +6,12 @@ import {
   onSetTheme,
 } from "@/store";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 export const useUiStore = () => {
   const dispatch = useDispatch();
   const { theme, language } = useSelector((state: { ui: UIState }) => state.ui);
+  const { i18n } = useTranslation();
 
   const setTheme = (theme: Theme) => {
     const root = window.document.documentElement;
@@ -50,15 +52,20 @@ export const useUiStore = () => {
   };
 
   const setLanguage = (language: Language) => {
-    localStorage.setItem("ui-language", language);
+    i18n.changeLanguage(language);
+    localStorage.setItem("i18nextLng", language);
     dispatch(onSetLanguage(language));
   };
 
   const checkLanguage = () => {
     dispatch(onCheckingLanguage());
-    const languageStorage = localStorage.getItem("ui-language");
-    if (languageStorage)
+    const languageStorage = localStorage.getItem("i18nextLng");
+    if (languageStorage) {
+      i18n.changeLanguage(languageStorage);
       return dispatch(onSetLanguage(languageStorage as Language));
+    }
+    i18n.changeLanguage(language);
+    localStorage.setItem("i18nextLng", language);
     dispatch(onSetLanguage(language));
   };
 

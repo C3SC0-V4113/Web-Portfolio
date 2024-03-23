@@ -4,13 +4,15 @@ import { ShapeSVG } from "./ShapeSVG";
 import { FaXTwitter } from "react-icons/fa6";
 import { Container } from "@/components/ui/container";
 import { IconButton } from "@/components/ui/icon-button";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
+  const { t } = useTranslation();
   return (
     <Container id="home" className="grid grid-cols-1 pt-20 md:pt-24">
       <div className="flex flex-col gap-3 text-center md:text-justify ">
         <h1 className="text-3xl font-bold">Francisco Valle</h1>
-        <h2>Soy el desarrollador web que potenciará tu presencia en linea</h2>
+        <h2>{t("header.description")}</h2>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button
             onClick={() => {

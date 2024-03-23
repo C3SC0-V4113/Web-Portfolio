@@ -27,7 +27,7 @@ export const LanguageToggle = () => {
         <DropdownMenuLabel>Change language</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup
-          value={language}
+          value={language.split("-")[0]}
           onValueChange={(language) => setLanguage(language as Language)}
         >
           <DropdownMenuRadioItem value={"es"}>Español</DropdownMenuRadioItem>

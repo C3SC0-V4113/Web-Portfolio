@@ -11,11 +11,16 @@ import { Skills } from "./components/views/Skills";
 import { useUiStore } from "./hooks/useUiStore";
 
 export const WebPortfolioApp = () => {
-  const { checkTheme, theme } = useUiStore();
+  const { checkTheme, theme, checkLanguage } = useUiStore();
 
   useEffect(() => {
     checkTheme();
   }, [checkTheme, theme]);
+
+  useEffect(() => {
+    checkLanguage();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
