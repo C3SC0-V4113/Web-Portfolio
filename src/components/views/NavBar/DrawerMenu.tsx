@@ -11,10 +11,9 @@ import {
 import { FaCode, FaHome, FaLink, FaStar } from "react-icons/fa";
 import { MdOutlineWorkspaces } from "react-icons/md";
 import { FaMessage } from "react-icons/fa6";
-import { LanguagesForm } from "./LanguagesForm";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle, LanguageToggle } from "./";
 
 const navMenu = [
   {
@@ -94,11 +93,14 @@ export const DrawerMenu = () => {
               </CommandGroup>
               <CommandSeparator className="my-4" />
               <CommandGroup>
-                <ThemeToggle />
+                <div className="flex justify-between w-full">
+                  <ThemeToggle />
+                  <LanguageToggle />
+                </div>
               </CommandGroup>
-              <CommandGroup>
+              {/* <CommandGroup>
                 <LanguagesForm classNames={{ container: "w-full" }} />
-              </CommandGroup>
+              </CommandGroup> */}
             </CommandList>
           </Command>
         </SheetContent>

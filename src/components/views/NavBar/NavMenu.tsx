@@ -5,8 +5,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Button } from "../../ui/button";
-import { LanguagesForm } from "./LanguagesForm";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle, LanguageToggle } from "./";
 
 export const NavMenu = () => {
   const navMenu = [
@@ -54,10 +53,15 @@ export const NavMenu = () => {
               </Button>
             </NavigationMenuItem>
           ))}
-          <ThemeToggle />
           <NavigationMenuItem>
-            <LanguagesForm />
+            <ThemeToggle />
           </NavigationMenuItem>
+          <NavigationMenuItem>
+            <LanguageToggle />
+          </NavigationMenuItem>
+          {/* <NavigationMenuItem>
+            <LanguagesForm />
+          </NavigationMenuItem> */}
         </NavigationMenuList>
       </NavigationMenu>
     </div>
