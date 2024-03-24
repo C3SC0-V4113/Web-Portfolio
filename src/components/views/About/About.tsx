@@ -12,9 +12,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { ResumeeCard } from "./ResumeeCard";
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation(["about"]);
 
   return (
     <>
@@ -23,8 +25,8 @@ export const About = () => {
         className="flex flex-col bg-primary text-primary-foreground"
       >
         <div className="flex flex-col gap-0.5 text-center">
-          <span className="text-sm font-light">Who Am I</span>
-          <h1 className="text-2xl font-bold text-background">About Me</h1>
+          <span className="text-sm font-light">{t("subtitle")}</span>
+          <h1 className="text-2xl font-bold text-background">{t("title")}</h1>
         </div>
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3 lg:gap-16">
           <div className="flex justify-center align-middle max-h-64">
@@ -38,31 +40,17 @@ export const About = () => {
           </div>
           <div className="flex flex-col justify-center gap-3 align-middle md:col-span-2">
             <h2 className="text-lg font-bold text-justify">
-              Desarrollador de Páginas Web Front End
+              {t("body.title")}
             </h2>
-            <p>
-              Soy Francisco Valle, un ingeniero de software salvadoreño
-              especializado en el desarrollo de páginas web dinamicas y
-              estaticas.
-            </p>
-            <p>
-              Empece como programador de aplicaciones web desde el año 2020,
-              cuando creaba aplicaciones sencillas con HTML y CSS en la
-              universidad. A traves de los años mi experiencia ha crecido en
-              empresas de desarrollo web y creo aplicaciones completas con ayuda
-              de React usando Typescript
-            </p>
-            <p>
-              Me gustan mucho las peliculas y el anime, incluso veo{" "}
-              <i>doramas</i> de vez en cuando, pero mi pasatiempo favorito son
-              los videojuegos, me encantan sagas como Metal Gear y Resident Evil
-            </p>
+            <p>{t("body.body.0")}</p>
+            <p>{t("body.body.1")}</p>
+            <p>{t("body.body.2")}</p>
             <Button
               className="w-full md:max-w-72"
               onClick={() => setOpen(true)}
               variant={"secondary"}
             >
-              Descargar CV
+              {t("resumeeButton")}
             </Button>
           </div>
         </div>
@@ -72,15 +60,15 @@ export const About = () => {
           <DialogOverlay />
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Download Resumee</DialogTitle>
+              <DialogTitle>{t("modal.title")}</DialogTitle>
             </DialogHeader>
             <div className="flex flex-col gap-5 sm:flex-row">
               <ResumeeCard
-                title="Spanish Resumee"
+                title={t("modal.es_resumee")}
                 pdfUrl="/pdf/Francisco_Valle-Desarrollador_React.pdf"
               />
               <ResumeeCard
-                title="English Resumee"
+                title={t("modal.en_resumee")}
                 pdfUrl="/pdf/Francisco_Valle-React_Developer.pdf"
               />
             </div>

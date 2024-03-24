@@ -1,0 +1,18 @@
+{
+  "title": "About me",
+  "subtitle": "Who I am",
+  "body": {
+    "title": "Front End Web Developer",
+    "body": [
+      "I am Francisco Valle, a Salvadoran software engineer specialized in the development of dynamic and static web pages.",
+      "I started as a web application programmer since 2020, when I created simple applications with HTML and CSS in university. Over the years, my experience has grown in web development companies, and I build complete applications with the help of React using TypeScript.",
+      "I really enjoy movies and anime; I even watch doramas from time to time, but my favorite pastime is playing video games. I love series like Metal Gear and Resident Evil."
+    ]
+  },
+  "resumeeButton": "Download CV",
+  "modal": {
+    "title": "Download CV",
+    "es_resumee": "CV in Spanish",
+    "en_resumee": "CV in English"
+  }
+}
