@@ -7,12 +7,12 @@ import { IconButton } from "@/components/ui/icon-button";
 import { useTranslation } from "react-i18next";
 
 export const Header = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(["header"]);
   return (
     <Container id="home" className="grid grid-cols-1 pt-20 md:pt-24">
       <div className="flex flex-col gap-3 text-center md:text-justify ">
         <h1 className="text-3xl font-bold">Francisco Valle</h1>
-        <h2>{t("header.description")}</h2>
+        <h2 className="text-center md:text-left">{t("description")}</h2>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button
             onClick={() => {
@@ -21,7 +21,7 @@ export const Header = () => {
             }}
             className="w-full md:w-auto"
           >
-            Contact Me
+            {t("CTA.contactme")}
           </Button>
           <Button
             onClick={() => {
@@ -30,7 +30,7 @@ export const Header = () => {
             }}
             className="w-full md:w-auto bg-accent text-accent-foreground hover:text-primary-foreground"
           >
-            My Works
+            {t("CTA.myworks")}
           </Button>
         </div>
         <div className="flex flex-row justify-center gap-4 align-middle md:justify-start">

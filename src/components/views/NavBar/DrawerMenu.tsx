@@ -14,41 +14,10 @@ import { FaMessage } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { ThemeToggle, LanguageToggle } from "./";
-
-const navMenu = [
-  {
-    direction: "home",
-    handler: "Home",
-    icon: <FaHome className="w-6 h-6 mr-4" />,
-  },
-  {
-    direction: "about",
-    handler: "About",
-    icon: <FaCode className="w-6 h-6 mr-4" />,
-  },
-  {
-    direction: "services",
-    handler: "Services",
-    icon: <FaLink className="w-6 h-6 mr-4" />,
-  },
-  {
-    direction: "skills",
-    handler: "Skills",
-    icon: <FaStar className="w-6 h-6 mr-4" />,
-  },
-  {
-    direction: "projects",
-    handler: "Projects",
-    icon: <MdOutlineWorkspaces className="w-6 h-6 mr-4" />,
-  },
-  {
-    direction: "contactme",
-    handler: "Contact Me",
-    icon: <FaMessage className="w-6 h-6 mr-4" />,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export const DrawerMenu = () => {
+  const { t } = useTranslation(["common"]);
   const [open, setOpen] = useState(false);
 
   const matches = useMediaQuery("(min-width: 768px)");
@@ -56,6 +25,39 @@ export const DrawerMenu = () => {
   useEffect(() => {
     matches && setOpen(false);
   }, [matches]);
+
+  const navMenu = [
+    {
+      direction: "home",
+      handler: t("home"),
+      icon: <FaHome className="w-6 h-6 mr-4" />,
+    },
+    {
+      direction: "about",
+      handler: t("about"),
+      icon: <FaCode className="w-6 h-6 mr-4" />,
+    },
+    {
+      direction: "services",
+      handler: t("services"),
+      icon: <FaLink className="w-6 h-6 mr-4" />,
+    },
+    {
+      direction: "skills",
+      handler: t("skills"),
+      icon: <FaStar className="w-6 h-6 mr-4" />,
+    },
+    {
+      direction: "projects",
+      handler: t("projects"),
+      icon: <MdOutlineWorkspaces className="w-6 h-6 mr-4" />,
+    },
+    {
+      direction: "contactme",
+      handler: t("contactme"),
+      icon: <FaMessage className="w-6 h-6 mr-4" />,
+    },
+  ];
 
   return (
     <div className="md:hidden">
@@ -98,9 +100,6 @@ export const DrawerMenu = () => {
                   <LanguageToggle />
                 </div>
               </CommandGroup>
-              {/* <CommandGroup>
-                <LanguagesForm classNames={{ container: "w-full" }} />
-              </CommandGroup> */}
             </CommandList>
           </Command>
         </SheetContent>

@@ -6,32 +6,34 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "../../ui/button";
 import { ThemeToggle, LanguageToggle } from "./";
+import { useTranslation } from "react-i18next";
 
 export const NavMenu = () => {
+  const { t } = useTranslation(["common"]);
   const navMenu = [
     {
       direction: "home",
-      handler: "Home",
+      handler: t("home"),
     },
     {
       direction: "about",
-      handler: "About",
+      handler: t("about"),
     },
     {
       direction: "services",
-      handler: "Services",
+      handler: t("services"),
     },
     {
       direction: "skills",
-      handler: "Skills",
+      handler: t("skills"),
     },
     {
       direction: "projects",
-      handler: "Projects",
+      handler: t("projects"),
     },
     {
       direction: "contactme",
-      handler: "Contact Me",
+      handler: t("contactme"),
     },
   ];
 
@@ -59,9 +61,6 @@ export const NavMenu = () => {
           <NavigationMenuItem>
             <LanguageToggle />
           </NavigationMenuItem>
-          {/* <NavigationMenuItem>
-            <LanguagesForm />
-          </NavigationMenuItem> */}
         </NavigationMenuList>
       </NavigationMenu>
     </div>

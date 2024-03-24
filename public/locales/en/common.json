@@ -1,0 +1,18 @@
+{
+  "home": "Home",
+  "about": "About",
+  "services": "Services",
+  "skills": "Skills",
+  "projects": "Projects",
+  "contactme": "Contact Me",
+  "darkmode": {
+    "title": "Dark Mode",
+    "span": "Toggle Theme",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "system": "System Configuration"
+  },
+  "language": {
+    "title": "Change Language"
+  }
+}
