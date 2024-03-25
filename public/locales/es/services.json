@@ -1,0 +1,30 @@
+{
+  "title": "Servicios",
+  "subtitle": "Que Hago",
+  "cards": [
+    {
+      "title": "Desarrollo de Páginas desde Cero",
+      "desc": "Desarrollo completo de sitios web modernos y atractivos utilizando React. Desde el diseño hasta la implementación, construyo experiencias web dinamicas y detalladas"
+    },
+    {
+      "title": "Diseño Web Intuitivo",
+      "desc": "Desarrollo interfaces atractivas y responsivas que se adaptan a cualquier dispositivo, garantizando una experiencia de usuario excepcional."
+    },
+    {
+      "title": "Experiencias Web Progresivas",
+      "desc": "Transformo tus sitios web en aplicaciones progresivas (PWAs), proporcionando a tus usuarios una experiencia similar a la de una aplicación nativa, con capacidad para funcionar sin conexión."
+    },
+    {
+      "title": "Páginas Dinámicas y Eficientes",
+      "desc": "Utilizando Next.js, construyo sitios web con renderización del lado del servidor para un rendimiento óptimo. Desarrollo experiencias web dinámicas y eficientes que satisfacen las demandas actuales del usuario."
+    },
+    {
+      "title": "Despliegue sin Problemas",
+      "desc": "No te preocupes por la parte técnica. Manejo el despliegue de tus aplicaciones web de manera eficiente, asegurando una puesta en marcha suave y sin complicaciones."
+    },
+    {
+      "title": "Aplicaciones Móviles con React Native",
+      "desc": "Llevo tus ideas a dispositivos móviles. Desarrollo aplicaciones nativas multiplataforma utilizando React Native para ofrecer experiencias móviles fluidas y consistentes."
+    }
+  ]
+}

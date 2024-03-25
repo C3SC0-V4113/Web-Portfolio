@@ -1,0 +1,30 @@
+{
+  "title": "Services",
+  "subtitle": "What I Do",
+  "cards": [
+    {
+      "title": "Development of Websites from Scratch",
+      "desc": "Complete development of modern and attractive websites using React. From design to implementation, I build dynamic and detailed web experiences."
+    },
+    {
+      "title": "Intuitive Web Design",
+      "desc": "Develop attractive and responsive interfaces that adapt to any device, ensuring an exceptional user experience."
+    },
+    {
+      "title": "Progressive Web Experiences",
+      "desc": "Transform your websites into progressive web applications (PWAs), providing your users with an experience similar to a native app, with the ability to function offline."
+    },
+    {
+      "title": "Dynamic and Efficient Pages",
+      "desc": "Using Next.js, I build websites with server-side rendering for optimal performance. I develop dynamic and efficient web experiences that meet current user demands."
+    },
+    {
+      "title": "Seamless Deployment",
+      "desc": "Don't worry about the technical part. I handle the deployment of your web applications efficiently, ensuring a smooth and hassle-free launch."
+    },
+    {
+      "title": "Mobile Applications with React Native",
+      "desc": "Bring your ideas to mobile devices. I develop cross-platform native applications using React Native to deliver smooth and consistent mobile experiences."
+    }
+  ]
+}
