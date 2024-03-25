@@ -1,0 +1,11 @@
+{
+  "title": "Skills",
+  "subtitle": "Why Choose Me",
+  "categories": {
+    "webdev": "Web Development",
+    "webdes": "Web Design",
+    "backdev": "Backend Development",
+    "serworker": "Service Worker Tool",
+    "mobile": "Mobile Development"
+  }
+}

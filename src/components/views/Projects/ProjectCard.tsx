@@ -23,6 +23,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   project: IProjects;
@@ -30,6 +31,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation(["projects"]);
 
   return (
     <>
@@ -78,13 +80,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                   </CarouselContent>
                 </Carousel>
                 <p>{project.description}</p>
-                <p className="font-semibold">Features:</p>
+                <p className="font-semibold">{t("featuresTitle")}:</p>
                 <ul className="ml-6 list-disc">
                   {project.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
-                <p className="font-semibold">Tools:</p>
+                <p className="font-semibold">{t("toolsTitle")}:</p>
                 <ul className="ml-6 list-disc">
                   {project.tools.map((tool, index) => (
                     <li key={index}>{tool}</li>

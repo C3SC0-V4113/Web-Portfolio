@@ -1,0 +1,28 @@
+{
+  "title": "Proyectos",
+  "subtitle": "Que Puedo Hacer",
+  "projects": [
+    {
+      "title": "Aplicación de Diarios",
+      "description": "Aplcacion para crear notas en formato de diarios donde guardar recuerdos usando texto e imagenes.",
+      "features": [
+        "Diseño Creado con la libreria de MaterialUI",
+        "Guardado en la nube usando Firebase para informacion y Cloudinary para la imagenes",
+        "Inicio de Sesion por medio de Google o por correo electrónico",
+        "Componentes probados usando jest",
+        "Manejo de Estado por React Redux"
+      ]
+    },
+    {
+      "title": "Aplicación 'Gif Expert'",
+      "description": "Aplicacion de una sola página que sirve como ejercicio para el uso de API's y de formulario sencillos, está aplicación funciona conectandose a una API de Gifs los cuales son buscados usando el formulario.",
+      "features": [
+        "Diseño Creado usando CSS Vanilla",
+        "Conexión con la API de GIPHY",
+        "Componentes probados usando jest"
+      ]
+    }
+  ],
+  "featuresTitle": "Características",
+  "toolsTitle": "Herramientas"
+}

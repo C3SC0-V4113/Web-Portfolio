@@ -6,21 +6,17 @@ import { IProjects } from "@/contracts/interfaces/IProjects";
 
 import { Container } from "@/components/ui/container";
 import { ProjectCard } from "./ProjectCard";
+import { useTranslation } from "react-i18next";
 
 export const Projects = () => {
+  const { t } = useTranslation(["projects"]);
+
   const projectsJSON: IProjects[] = [
     {
       id: 1,
-      name: "Journal App",
-      description:
-        "Aplcacion para crear notas en formato de diarios donde guardar recuerdos usando texto e imagenes.",
-      features: [
-        "Diseño Creado con la libreria de MaterialUI",
-        "Guardado en la nube usando Firebase para informacion y Cloudinary para la imagenes",
-        "Inicio de Sesion por medio de Google o por correo electrónico",
-        "Componentes probados usando jest",
-        "Manejo de Estado por React Redux",
-      ],
+      name: t("projects.0.title"),
+      description: t("projects.0.description"),
+      features: t("projects.0.features", { returnObjects: true }),
       tools: [
         "React.JS",
         "MaterialUI",
@@ -51,14 +47,9 @@ export const Projects = () => {
     },
     {
       id: 2,
-      name: "Gif Expert App",
-      description:
-        "Aplicacion de una sola página que sirve como ejercicio para el uso de API's y de formulario sencillos, está aplicación funciona conectandose a una API de Gifs los cuales son buscados usando el formulario",
-      features: [
-        "Diseño Creado usando CSS Vanilla",
-        "Conexión con la API de GIPHY",
-        "Componentes probados usando jest",
-      ],
+      name: t("projects.1.title"),
+      description: t("projects.1.description"),
+      features: t("projects.1.features", { returnObjects: true }),
       tools: ["React.JS", "Jest", "GIPHY"],
       tags: ["web"],
       repository: {
@@ -84,8 +75,8 @@ export const Projects = () => {
   return (
     <Container id="projects" className="flex flex-col">
       <div className="flex flex-col gap-0.5 text-center">
-        <span className="text-sm font-light">What Can I Do</span>
-        <h1 className="text-2xl font-bold text-primary">Projects</h1>
+        <span className="text-sm font-light">{t("subtitle")}</span>
+        <h1 className="text-2xl font-bold text-primary">{t("title")}</h1>
       </div>
 
       <Tabs defaultValue="all" className="w-full">

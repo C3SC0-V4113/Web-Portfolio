@@ -1,0 +1,28 @@
+{
+  "title": "Projects",
+  "subtitle": "What I Can Do",
+  "projects": [
+    {
+      "title": "Journal Application",
+      "description": "An application for creating journal-style notes to store memories using text and images.",
+      "features": [
+        "Design created with the MaterialUI library",
+        "Cloud storage using Firebase for information and Cloudinary for images",
+        "Sign-in via Google or email",
+        "Components tested using Jest",
+        "State management using React Redux"
+      ]
+    },
+    {
+      "title": "Gif Expert Application",
+      "description": "Single-page application serving as an exercise for API usage and simple forms. This application connects to a Giphy API to search for gifs using the form.",
+      "features": [
+        "Design created using Vanilla CSS",
+        "Connection to the GIPHY API",
+        "Components tested using Jest"
+      ]
+    }
+  ],
+  "featuresTitle": "Features",
+  "toolsTitle": "Tools"
+}

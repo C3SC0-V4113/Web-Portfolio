@@ -1,0 +1,11 @@
+{
+  "title": "Habilidades",
+  "subtitle": "Porque Elegirme",
+  "categories": {
+    "webdev": "Desarrollo Web",
+    "webdes": "Diseño Web",
+    "backdev": "Desarrollo Backend",
+    "serworker": "Herramienta de Service Worker",
+    "mobile": "Desarrollo Mobile"
+  }
+}
