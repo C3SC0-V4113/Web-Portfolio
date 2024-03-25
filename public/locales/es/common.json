@@ -14,5 +14,6 @@
   },
   "language": {
     "title": "Cambio de idioma"
-  }
+  },
+  "footer": "© Creado con Amor por Francisco Valle {{year}}"
 }

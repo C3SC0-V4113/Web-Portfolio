@@ -14,5 +14,6 @@
   },
   "language": {
     "title": "Change Language"
-  }
+  },
+  "footer": "© Created with love by Francisco Valle {{year}}"
 }

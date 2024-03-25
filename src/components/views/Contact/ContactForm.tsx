@@ -13,14 +13,17 @@ import { z } from "zod";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-
-const formSchema = z.object({
-  name: z.string().min(2).max(50),
-  email: z.string().email().min(5),
-  body: z.string().min(2).max(50),
-});
+import { useTranslation } from "react-i18next";
 
 export const ContactForm = () => {
+  const { t } = useTranslation(["contact"]);
+
+  const formSchema = z.object({
+    name: z.string().min(2).max(50),
+    email: z.string().email().min(5),
+    body: z.string().min(2).max(50),
+  });
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,7 +44,7 @@ export const ContactForm = () => {
           name={"name"}
           render={({ field }) => (
             <FormItem className="space-y-1">
-              <FormLabel>Name</FormLabel>
+              <FormLabel>{t("labels.name")}</FormLabel>
               <FormControl>
                 <Input
                   {...field}
@@ -57,7 +60,7 @@ export const ContactForm = () => {
           name={"email"}
           render={({ field }) => (
             <FormItem className="space-y-1">
-              <FormLabel>Email</FormLabel>
+              <FormLabel>{t("labels.email")}</FormLabel>
               <FormControl>
                 <Input
                   {...field}
@@ -74,7 +77,7 @@ export const ContactForm = () => {
           name={"body"}
           render={({ field }) => (
             <FormItem className="space-y-1">
-              <FormLabel>Details</FormLabel>
+              <FormLabel>{t("labels.body")}</FormLabel>
               <FormControl>
                 <Textarea
                   {...field}

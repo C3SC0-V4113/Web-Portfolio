@@ -1,0 +1,29 @@
+{
+  "title": "Contact Me",
+  "subtitle": "Lets Talk",
+  "socialMedia": "Interact With Me in Social Media",
+  "contactMe": "Contact Me if you want to work with me",
+  "labels": {
+    "name": "Name",
+    "email": "Email",
+    "body": "Details"
+  },
+  "Required": "Required field",
+  "errors": {
+    "name": {
+      "required": "Name is required",
+      "min": "Name should be at least 2 characters long",
+      "max": "Name should be at most 50 characters long"
+    },
+    "email": {
+      "required": "Email is required",
+      "min": "Email should be at least 5 characters long",
+      "email": "Email address is invalid"
+    },
+    "body": {
+      "required": "Body is required",
+      "min": "Body should be at least 2 characters long",
+      "max": "Body should be at most 50 characters long"
+    }
+  }
+}
