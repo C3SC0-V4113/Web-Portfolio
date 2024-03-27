@@ -8,11 +8,12 @@
     "email": "Email",
     "body": "Details"
   },
-  "Required": "Required field",
+  "required": "Required field",
+  "submitButton": "Send Email",
   "errors": {
     "name": {
       "required": "Name is required",
-      "min": "Name should be at least 2 characters long",
+      "min": "Name should be at least 5 characters long",
       "max": "Name should be at most 50 characters long"
     },
     "email": {
@@ -21,9 +22,9 @@
       "email": "Email address is invalid"
     },
     "body": {
-      "required": "Body is required",
-      "min": "Body should be at least 2 characters long",
-      "max": "Body should be at most 50 characters long"
+      "required": "Details is required",
+      "min": "Details should be at least 2 characters long",
+      "max": "Details should be at most 150 characters long"
     }
   }
 }

@@ -19,9 +19,30 @@ export const ContactForm = () => {
   const { t } = useTranslation(["contact"]);
 
   const formSchema = z.object({
-    name: z.string().min(2).max(50),
-    email: z.string().email().min(5),
-    body: z.string().min(2).max(50),
+    name: z
+      .string({
+        required_error: t("errors.name.required"),
+      })
+      .min(5, {
+        message: t("errors.name.min"),
+      })
+      .max(50, { message: t("errors.name.max") }),
+    email: z
+      .string({
+        required_error: t("errors.email.required"),
+      })
+      .email({
+        message: t("errors.email.email"),
+      })
+      .min(5, { message: t("errors.email.min") }),
+    body: z
+      .string({
+        required_error: t("errors.body.required"),
+      })
+      .min(2, { message: t("errors.body.min") })
+      .max(150, {
+        message: t("errors.body.max"),
+      }),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -89,7 +110,7 @@ export const ContactForm = () => {
           )}
         />
         <Button type="submit" variant={"secondary"}>
-          Send Email
+          {t("submitButton")}
         </Button>
       </form>
     </Form>

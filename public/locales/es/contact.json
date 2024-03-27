@@ -1,0 +1,30 @@
+{
+  "title": "Contáctame",
+  "subtitle": "Hablemos",
+  "socialMedia": "Interactúa conmigo en redes sociales",
+  "contactMe": "Contáctame si quieres trabajar conmigo",
+  "labels": {
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "body": "Detalles"
+  },
+  "required": "Campo obligatorio",
+  "submitButton": "Enviar correo",
+  "errors": {
+    "name": {
+      "required": "El nombre es obligatorio",
+      "min": "El nombre debe tener al menos 5 caracteres",
+      "max": "El nombre debe tener como máximo 50 caracteres"
+    },
+    "email": {
+      "required": "El correo electrónico es obligatorio",
+      "min": "El correo electrónico debe tener al menos 5 caracteres",
+      "email": "La dirección de correo electrónico no es válida"
+    },
+    "body": {
+      "required": "Los detalles son obligatorios",
+      "min": "Los detalles deben tener al menos 2 caracteres",
+      "max": "Los detalles deben tener como máximo 150 caracteres"
+    }
+  }
+}
