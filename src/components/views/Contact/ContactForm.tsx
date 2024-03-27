@@ -14,9 +14,15 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import API from "@/api/apiServices";
+import { useState } from "react";
+import { FaCircleNotch } from "react-icons/fa";
+import { useToast } from "@/components/ui/use-toast";
 
 export const ContactForm = () => {
+  const { toast } = useToast();
   const { t } = useTranslation(["contact"]);
+  const [isSending, setIsSending] = useState(false);
 
   const formSchema = z.object({
     name: z
@@ -54,8 +60,26 @@ export const ContactForm = () => {
     },
   });
   const { handleSubmit, control } = form;
-  const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = (values) =>
-    console.log(values);
+  const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = (values) => {
+    setIsSending(true);
+    try {
+      setIsSending(false);
+      API.services.sendEmail({ ...values });
+      toast({
+        variant: "destructive",
+        title: t("toast.fail.title"),
+        description: t("toast.fail.desc"),
+      });
+    } catch (error) {
+      setIsSending(false);
+      console.error(error);
+      toast({
+        variant: "destructive",
+        title: t("toast.fail.title"),
+        description: t("toast.fail.desc"),
+      });
+    }
+  };
 
   return (
     <Form {...form}>
@@ -109,8 +133,9 @@ export const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" variant={"secondary"}>
+        <Button type="submit" disabled={isSending} variant={"secondary"}>
           {t("submitButton")}
+          {isSending! ? <FaCircleNotch className="ml-2 animate-spin" /> : <></>}
         </Button>
       </form>
     </Form>

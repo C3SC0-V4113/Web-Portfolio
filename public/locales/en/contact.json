@@ -10,6 +10,16 @@
   },
   "required": "Required field",
   "submitButton": "Send Email",
+  "toast": {
+    "fail": {
+      "title": "There was an error sending email",
+      "desc": "Please try again later or try in a social media application"
+    },
+    "success": {
+      "title": "The message was successfully sent",
+      "desc": "Ill be in touch with you soon!"
+    }
+  },
   "errors": {
     "name": {
       "required": "Name is required",

@@ -10,6 +10,16 @@
   },
   "required": "Campo obligatorio",
   "submitButton": "Enviar correo",
+  "toast": {
+    "fail": {
+      "title": "Hubo un error al enviar el correo",
+      "desc": "Porfavor intente de nuevo o contacteme por mis redes sociales"
+    },
+    "success": {
+      "title": "El mensaje fue enviado satisfactoriamente",
+      "desc": "¡Estaré en contacto contigo pronto!"
+    }
+  },
   "errors": {
     "name": {
       "required": "El nombre es obligatorio",
