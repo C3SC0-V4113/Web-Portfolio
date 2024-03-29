@@ -7,6 +7,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import ReCAPTCHA from "react-google-recaptcha";
 import { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -15,14 +16,30 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import API from "@/api/apiServices";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaCircleNotch } from "react-icons/fa";
 import { useToast } from "@/components/ui/use-toast";
+import { getEnvVariables } from "@/lib/getEnvVariables";
+import { useUiStore } from "@/hooks/useUiStore";
 
 export const ContactForm = () => {
   const { toast } = useToast();
+  const { theme, language } = useUiStore();
   const { t } = useTranslation(["contact"]);
   const [isSending, setIsSending] = useState(false);
+  const { VITE_CAPTCHA_PUBLIC_KEY } = getEnvVariables();
+
+  const [themeCaptcha, setThemeCaptcha] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    if (theme === "system") {
+      setThemeCaptcha("light");
+    } else {
+      setThemeCaptcha(theme);
+    }
+  }, [theme, themeCaptcha]);
+
+  const captchaRef = useRef<ReCAPTCHA>(null);
 
   const formSchema = z.object({
     name: z
@@ -59,26 +76,39 @@ export const ContactForm = () => {
       body: "",
     },
   });
-  const { handleSubmit, control } = form;
+  const { handleSubmit, control, reset } = form;
   const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = async (
     values
   ) => {
     setIsSending(true);
-    try {
+    const token = await captchaRef.current?.executeAsync();
+
+    if (!token) {
       setIsSending(false);
-      await API.services.sendEmail({ ...values });
+      toast({
+        variant: "destructive",
+        title: t("toast.captcha.title"),
+        description: t("toast.captcha.desc"),
+      });
+      return;
+    }
+
+    try {
+      await API.services.sendEmail({ ...values }, token ? token : "");
+      captchaRef.current?.reset();
       toast({
         title: t("toast.success.title"),
         description: t("toast.success.desc"),
       });
-    } catch (error) {
+      reset();
       setIsSending(false);
-      console.error(error);
+    } catch (error) {
       toast({
         variant: "destructive",
         title: t("toast.fail.title"),
         description: t("toast.fail.desc"),
       });
+      setIsSending(false);
     }
   };
 
@@ -133,6 +163,14 @@ export const ContactForm = () => {
               <FormMessage />
             </FormItem>
           )}
+        />
+        <ReCAPTCHA
+          className="hidden"
+          theme={themeCaptcha}
+          size="invisible"
+          ref={captchaRef}
+          hl={language}
+          sitekey={VITE_CAPTCHA_PUBLIC_KEY}
         />
         <Button type="submit" disabled={isSending} variant={"secondary"}>
           {t("submitButton")}

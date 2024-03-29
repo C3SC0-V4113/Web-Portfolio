@@ -18,6 +18,10 @@
     "success": {
       "title": "The message was successfully sent",
       "desc": "Ill be in touch with you soon!"
+    },
+    "captcha": {
+      "title": "We need to verify that you are not a robot",
+      "desc": "Please complete the captcha to continue."
     }
   },
   "errors": {
