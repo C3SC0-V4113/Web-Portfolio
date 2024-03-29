@@ -60,15 +60,16 @@ export const ContactForm = () => {
     },
   });
   const { handleSubmit, control } = form;
-  const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = (values) => {
+  const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = async (
+    values
+  ) => {
     setIsSending(true);
     try {
       setIsSending(false);
-      API.services.sendEmail({ ...values });
+      await API.services.sendEmail({ ...values });
       toast({
-        variant: "destructive",
-        title: t("toast.fail.title"),
-        description: t("toast.fail.desc"),
+        title: t("toast.success.title"),
+        description: t("toast.success.desc"),
       });
     } catch (error) {
       setIsSending(false);
