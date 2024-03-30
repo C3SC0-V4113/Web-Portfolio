@@ -39,7 +39,7 @@ export const About = () => {
             </Avatar>
           </div>
           <div className="flex flex-col justify-center gap-3 align-middle md:col-span-2">
-            <h2 className="text-lg font-bold text-justify">
+            <h2 className="text-lg font-bold text-center md:text-justify">
               {t("body.title")}
             </h2>
             <p>{t("body.body.0")}</p>

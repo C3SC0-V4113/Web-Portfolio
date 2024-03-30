@@ -25,7 +25,7 @@ export const Header = () => {
           </Button>
           <Button
             onClick={() => {
-              const element = document.getElementById("skills");
+              const element = document.getElementById("projects");
               element?.scrollIntoView({ behavior: "smooth" });
             }}
             className="w-full md:w-auto bg-accent text-accent-foreground hover:text-primary-foreground"
