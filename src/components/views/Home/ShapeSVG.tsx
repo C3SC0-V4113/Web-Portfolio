@@ -1,4 +1,8 @@
+import { useUiStore } from "@/hooks/useUiStore";
+
 export const ShapeSVG = () => {
+  const { theme } = useUiStore();
+
   return (
     <svg
       id="sw-js-blob-svg"
@@ -9,7 +13,11 @@ export const ShapeSVG = () => {
       <defs>
         <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
           <stop id="stop1" stopColor="#CF6317" offset="0%"></stop>
-          <stop id="stop2" stopColor="#5C2C0A" offset="100%"></stop>
+          <stop
+            id="stop2"
+            stopColor={theme === "dark" ? "#5C2C0A" : "#F7D4BA"}
+            offset="100%"
+          ></stop>
         </linearGradient>
       </defs>
       <path
