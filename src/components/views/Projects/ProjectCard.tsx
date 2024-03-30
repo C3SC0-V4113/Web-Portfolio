@@ -25,6 +25,7 @@ import {
 import { type CarouselApi } from "@/components/ui/carousel";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useTranslation } from "react-i18next";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface ProjectCardProps {
   project: IProjects;
@@ -57,13 +58,18 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           <CardTitle>{project.name}</CardTitle>
         </CardHeader>
         <CardContent>
-          <div>
-            <img
-              src={project.images.thumbnail}
-              alt="project image"
-              className="w-full rounded-lg hover:opacity-50"
+          <div className="w-full">
+            <AspectRatio
+              ratio={16 / 9}
+              className="rounded-lg hover:opacity-50 bg-primary"
               onClick={() => setOpen(true)}
-            />
+            >
+              <img
+                src={project.images.thumbnail}
+                alt="project image"
+                className="w-full rounded-lg"
+              />
+            </AspectRatio>
           </div>
         </CardContent>
         <CardFooter className="w-full">
@@ -91,12 +97,14 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                   <CarouselContent>
                     {project.images.gallery.map((image, index) => (
                       <CarouselItem className="basis-10/12" key={index}>
-                        {<img src={image} alt={image} />}
+                        <AspectRatio ratio={4 / 3} className="flex bg-primary">
+                          {<img src={image} alt={image} />}
+                        </AspectRatio>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
                 </Carousel>
-                <div>
+                <div className="font-semibold text-center">
                   {t("slidesCounter", {
                     current,
                     total: count,
