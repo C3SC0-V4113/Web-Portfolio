@@ -16,12 +16,13 @@ import {
 import { IconButton } from "@/components/ui/icon-button";
 import { FaEllipsisH, FaGithub, FaLink } from "react-icons/fa";
 import { IProjects } from "../../../contracts/interfaces/IProjects";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { type CarouselApi } from "@/components/ui/carousel";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useTranslation } from "react-i18next";
 
@@ -32,6 +33,22 @@ interface ProjectCardProps {
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation(["projects"]);
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   return (
     <>
@@ -70,15 +87,21 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             </DialogHeader>
             <ScrollArea className="h-96 lg:h-full">
               <div className="flex flex-col gap-3 px-4 py-5">
-                <Carousel>
+                <Carousel setApi={setApi}>
                   <CarouselContent>
                     {project.images.gallery.map((image, index) => (
-                      <CarouselItem key={index}>
+                      <CarouselItem className="basis-10/12" key={index}>
                         {<img src={image} alt={image} />}
                       </CarouselItem>
                     ))}
                   </CarouselContent>
                 </Carousel>
+                <div>
+                  {t("slidesCounter", {
+                    current,
+                    total: count,
+                  })}
+                </div>
                 <p>{project.description}</p>
                 <p className="font-semibold">{t("featuresTitle")}:</p>
                 <ul className="ml-6 list-disc">

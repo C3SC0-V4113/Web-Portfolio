@@ -24,5 +24,6 @@
     }
   ],
   "featuresTitle": "Features",
+  "slidesCounter": "Slide {{current}} of {{total}}",
   "toolsTitle": "Tools"
 }

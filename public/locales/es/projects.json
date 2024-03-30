@@ -24,5 +24,6 @@
     }
   ],
   "featuresTitle": "Características",
+  "slidesCounter": "Imagen {{current}} de {{total}}",
   "toolsTitle": "Herramientas"
 }
