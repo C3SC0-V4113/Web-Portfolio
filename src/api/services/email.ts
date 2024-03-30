@@ -5,6 +5,7 @@ interface sendEmailInputs {
   name: string;
   email: string;
   body: string;
+  lng: string;
 }
 
 const sendEmail = async (
@@ -14,9 +15,7 @@ const sendEmail = async (
   const { VITE_EMAIL } = getEnvVariables();
 
   const params = {
-    user_email: emailInputs.email,
-    user_name: emailInputs.name,
-    message: emailInputs.body,
+    ...emailInputs,
     "g-recaptcha-response": captchaResponse,
   };
 

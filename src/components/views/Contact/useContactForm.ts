@@ -81,7 +81,10 @@ export const useContactForm = () => {
     }
 
     try {
-      await API.services.sendEmail({ ...values }, token ? token : "");
+      await API.services.sendEmail(
+        { ...values, lng: language },
+        token ? token : ""
+      );
       captchaRef.current?.reset();
       toast({
         title: t("toast.success.title"),
