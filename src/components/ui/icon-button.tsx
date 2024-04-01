@@ -24,7 +24,7 @@ export const IconButton = ({
   return (
     <a
       href={href}
-      className={`p-2 rounded-full bg-accent text-accent-foreground hover:bg-primary hover:text-primary-foreground ${className}`}
+      className={`p-2 rounded-full bg-accent transition text-accent-foreground hover:bg-primary hover:text-primary-foreground ${className}`}
       target={target}
       {...rest}
     >

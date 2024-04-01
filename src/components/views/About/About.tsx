@@ -25,7 +25,9 @@ export const About = () => {
         className="flex flex-col bg-primary text-primary-foreground"
       >
         <div className="flex flex-col gap-0.5 text-center">
-          <span className="text-sm font-light">{t("subtitle")}</span>
+          <span className="text-sm font-light font-silksceen">
+            {t("subtitle")}
+          </span>
           <h1 className="text-2xl font-bold text-background">{t("title")}</h1>
         </div>
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3 lg:gap-16">

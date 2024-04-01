@@ -61,7 +61,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           <div className="w-full">
             <AspectRatio
               ratio={16 / 9}
-              className="rounded-lg hover:opacity-50 bg-primary"
+              className="transition rounded-lg hover:opacity-50 bg-primary"
               onClick={() => setOpen(true)}
             >
               <img

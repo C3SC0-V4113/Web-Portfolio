@@ -77,7 +77,9 @@ export const Projects = () => {
   return (
     <Container id="projects" className="flex flex-col">
       <div className="flex flex-col gap-0.5 text-center">
-        <span className="text-sm font-light">{t("subtitle")}</span>
+        <span className="text-sm font-light font-silksceen">
+          {t("subtitle")}
+        </span>
         <h1 className="text-2xl font-bold text-primary">{t("title")}</h1>
       </div>
 
