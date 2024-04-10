@@ -16,7 +16,7 @@ export const Skills = () => {
       id: "2",
       department: t("categories.webdev"),
       skillName: "NextJS",
-      proficiency: 70 /**From 1 to 100 */,
+      proficiency: 40 /**From 1 to 100 */,
     },
     {
       id: "4",
