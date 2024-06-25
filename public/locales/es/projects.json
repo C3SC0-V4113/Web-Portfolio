@@ -21,6 +21,38 @@
         "Conexión con la API de GIPHY",
         "Componentes probados usando jest"
       ]
+    },
+    {
+      "title": "REST Countries",
+      "description": "Aplicacion que usa una API tipo REST de paises de todo el mundo, con una pantalla para ver todos los paises y filtrarlos por nombre y continente y una pantalla detalle para cada pais donde se puede ver información detallada del pais seleccionado",
+      "features": [
+        "Diseño Creado con la libreria de ShadCn",
+        "Añadido de un modo claro y oscuro",
+        "Conexión con la API de REST Countries",
+        "Uso de React Router para el manejo de las dos pantallas"
+      ]
+    },
+    {
+      "title": "Lista de Tareas",
+      "description": "Una sencilla aplicación de lista de Tareas con opcion de registro e ingreso para mantener tus tareas personales y con la opcion de arrastar y soltar las tareas para reordenarlas",
+      "features": [
+        "Diseño Creado con la libreria de ShadCn",
+        "Añadido de un modo claro y oscuro",
+        "Capacidad de arrastrar y soltar las tareas para reordenar las tareas",
+        "Conexión con proyecto de FirebaseDB y FirebaseAuth",
+        "Uso de React Router para el manejo de las vistas, acciones y autenticación"
+      ]
+    },
+    {
+      "title": "Formulario Multi-pasos",
+      "description": "Formulario separado en 5 secciones distintas para una compartimentación de las preguntas",
+      "features": [
+        "Diseño Creado con la libreria de ShadCn",
+        "Aplicación creada con Next.js",
+        "Validación de campos con React Hook Forms",
+        "Rendimiento y Optimización Avanzados",
+        "Uso del recién agregado App Directory de Next.js"
+      ]
     }
   ],
   "featuresTitle": "Características",

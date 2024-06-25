@@ -21,6 +21,38 @@
         "Connection to the GIPHY API",
         "Components tested using Jest"
       ]
+    },
+    {
+      "title": "REST Countries",
+      "description": "Application that uses a REST API of countries from all over the world, with a screen to view all countries and filter them by name and continent, and a detail screen for each country where detailed information about the selected country can be seen.",
+      "features": [
+        "Design created with the ShadCn library",
+        "Added light and dark mode",
+        "Connection with the REST Countries API",
+        "Use of React Router for managing the two screens"
+      ]
+    },
+    {
+      "title": "Todo List",
+      "description": "A simple todo list application with registration and login options to keep your personal tasks, and the option to drag and drop tasks to reorder them.",
+      "features": [
+        "Design created with the ShadCn library",
+        "Added light and dark mode",
+        "Ability to drag and drop tasks to reorder them",
+        "Connection with FirebaseDB and FirebaseAuth projects",
+        "Use of React Router for managing views, actions, and authentication"
+      ]
+    },
+    {
+      "title": "Multi-step Form",
+      "description": "Form divided into 5 distinct sections for compartmentalization of questions.",
+      "features": [
+        "Design created with the ShadCn library",
+        "Application built with Next.js",
+        "Field validation with React Hook Form",
+        "Advanced performance and optimization",
+        "Use of the newly added Next.js App Directory"
+      ]
     }
   ],
   "featuresTitle": "Features",
