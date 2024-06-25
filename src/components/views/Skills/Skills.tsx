@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/container";
-import { Progress } from "@/components/ui/progress";
 import { useTranslation } from "react-i18next";
 
 export const Skills = () => {
@@ -10,37 +9,37 @@ export const Skills = () => {
       id: "1",
       department: t("categories.webdev"),
       skillName: "React",
-      proficiency: 90 /**From 1 to 100 */,
+      proficiency: t("levels.pro") /**beginner,intermediate,pro, expert */,
     },
     {
       id: "2",
       department: t("categories.webdev"),
-      skillName: "NextJS",
-      proficiency: 40 /**From 1 to 100 */,
+      skillName: "Next.js",
+      proficiency: t("levels.intermediate") /**From 1 to 100 */,
     },
     {
       id: "4",
       department: t("categories.webdes"),
       skillName: "Tailwind",
-      proficiency: 90 /**From 1 to 100 */,
+      proficiency: t("levels.pro") /**From 1 to 100 */,
     },
     {
       id: "5",
       department: t("categories.backdev"),
-      skillName: "NodeJS",
-      proficiency: 40 /**From 1 to 100 */,
+      skillName: "Node.js",
+      proficiency: t("levels.beginner") /**From 1 to 100 */,
     },
     {
       id: "6",
       department: t("categories.serworker"),
       skillName: "Workbox",
-      proficiency: 60 /**From 1 to 100 */,
+      proficiency: t("levels.beginner") /**From 1 to 100 */,
     },
     {
       id: "7",
       department: t("categories.mobile"),
       skillName: "React Native",
-      proficiency: 70 /**From 1 to 100 */,
+      proficiency: t("levels.intermediate") /**From 1 to 100 */,
     },
   ];
   return (
@@ -61,12 +60,9 @@ export const Skills = () => {
               <p className="text-lg font-semibold">{skill.department}</p>
               <div className="flex justify-between">
                 <p className="font-medium">{skill.skillName}</p>
-                <p className="font-semibold text-accent">
-                  {skill.proficiency}%
-                </p>
+                <p className="font-bold text-accent">{skill.proficiency}</p>
               </div>
             </div>
-            <Progress className="w-full" value={skill.proficiency} />
           </div>
         ))}
       </div>

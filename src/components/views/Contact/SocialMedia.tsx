@@ -34,18 +34,19 @@ export const SocialMedia = () => {
   return (
     <div className="flex flex-row gap-4 align-middle justify-evenly md:flex-col md:h-full">
       {socialMedias.map(({ Icon, id, linkAddress, name }) => (
-        <div
+        <a
           key={id}
-          className="flex flex-col gap-2 text-center md:flex-row md:gap-5 md:self-center md:w-40"
+          href={linkAddress}
+          target="_blank"
+          className="flex flex-col gap-2 text-center md:flex-row md:gap-5 md:self-center md:w-40 hover:underline"
         >
           <IconButton
             icon={Icon}
             className="mx-auto md:mx-0 hover:bg-secondary"
             iconClass="md:w-12 md:h-12"
-            href={linkAddress}
           />
           <p className="text-lg md:text-xl md:my-auto">{name}</p>
-        </div>
+        </a>
       ))}
     </div>
   );

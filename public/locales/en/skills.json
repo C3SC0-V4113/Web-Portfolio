@@ -7,5 +7,10 @@
     "backdev": "Backend Development",
     "serworker": "Service Worker Tool",
     "mobile": "Mobile Development"
+  },
+  "levels": {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "pro": "Proficient"
   }
 }
